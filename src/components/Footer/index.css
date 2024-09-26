@@ -1,0 +1,134 @@
+.footer-container {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    color: #505050;
+    margin-top: 150px;
+}
+
+.footer-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    /* min-width: 220px; */
+    max-width: 250px; 
+    padding: 10px;
+    /* border: 2px solid red; */
+    box-sizing: border-box;
+}
+
+.logo-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.footer-column h4 {
+    color: #4a7f38;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4a7f38;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-list ul li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.check-icon, .social-icon {
+    color: #4a7f38;
+    margin-right: 8px;
+}
+
+.footer-map {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.social-icons ul li img {
+    width: 16px;  /* Adjust size as needed */
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.newsletter-form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1; /* Takes up available space */
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.newsletter-form button {
+    padding: 8px 12px;
+    background-color: #4a7f38;
+    color: white;
+    border: 1px solid #4a7f38;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevents button from shrinking */
+}
+
+.newsletter-form button:hover {
+    background-color: #3a6b28;
+}
+
+
+.footer-disclaimer {
+    font-size: 12px;
+    color: #e2e1e1;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #3f5e2d;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    color: #999999;
+    font-size: 14px;
+    text-align: right;
+    background-color: black;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-row {
+        grid-template-columns: 1fr; /* Stacks columns vertically on smaller screens */
+    }
+    .footer-column {
+        max-width: 100%; /* Adjust column width for smaller screens */
+    }
+    .footer-bottom {
+        justify-content: center;
+    }
+}

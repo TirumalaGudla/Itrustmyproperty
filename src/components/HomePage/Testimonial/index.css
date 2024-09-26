@@ -1,0 +1,96 @@
+.customer-review{
+  margin: 20px auto;
+  /* border: 6px solid rgb(255, 60, 0); */
+}
+.testimonial-container {
+  position: relative; /* Make the container relative for positioning .testimonial-quote */
+  display: flex;
+  flex-direction: column;
+  background-color: #3f5e2d;
+  padding: 20px;
+  border-radius: 10px;
+  height: 300px;
+  /* border: 2px solid blue; */
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  height: 100%; /* Use the full height of .testimonial-container */
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative; /* Ensure the .testimonial-content is positioned relative */
+}
+.testimonial-image{
+  width: 40%;
+}
+
+.customer-image {
+  width: 80%;
+  height: 100%; /* Fill the height of .testimonial-content */
+  border-radius: 10px;
+  object-fit: cover; /* Ensure the image covers its area properly */
+}
+
+.testimonial-text {
+  width: 60%;
+  color: white;
+
+  /* border: 2px solid red; */
+}
+
+.testimonial-text h2 {
+  width: 80%;
+  font-style: italic;
+  color: white;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight:400;
+}
+
+.testimonial-text p {
+  width: 80%;
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.6;
+  color: white;
+}
+
+.testimonial-quote {
+  position: absolute;
+  bottom: -100px; /* Adjust as needed to overlap the bottom */
+  right: 200px; /* Adjust as needed to overlap the right */
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 260px; /* Fixed width */
+  box-sizing: border-box;
+  height: 150px; /* Adjust height as needed */
+  transform: translateX(50%); /* Ensure half of it overlaps */
+
+}
+
+.testimonial-quote blockquote {
+  font-style: italic;
+  color: #4a7f38;
+  margin: 0;
+  position: relative;
+}
+
+.testimonial-quote blockquote p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.testimonial-quote blockquote::before {
+  content: "“";
+  font-size: 60px;
+  color: #4a7f38;
+  position: absolute;
+  left: -10px;
+  top: -40px;
+}

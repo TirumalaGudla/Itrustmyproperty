@@ -1,0 +1,209 @@
+.top-ventures-wrapper1 {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.heading-wrapper1 {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.heading-wrapper1 h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.heading-line1 {
+  width: 25%;
+  height: 3px;
+  background-color: #3f5e2d;
+  margin: 0 auto;
+}
+
+.heading-short-line1 {
+  width: 15%;
+  height: 3px;
+  background-color: #3f5e2d;
+  margin: 0 auto;
+  position: relative;
+  top: -6px;
+  margin-top: 20px !important;
+}
+
+.view-all-button1 {
+  background-color: #3f5e2d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 20px auto 0; /* Center the button and add space above it */
+  width: fit-content;
+}
+
+.view-all-icon1 {
+  margin-left: 5px;
+}
+
+.ventures-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px 25px;
+  justify-content: center;
+}
+
+.venture-card {
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.venture-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.venture-info {
+  padding: 15px;
+}
+/* 
+.venture-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.venture-title h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+} */
+.venture-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative; /* For the tooltip to be positioned relative to this container */
+  margin-bottom: 10px;
+}
+
+.title-wrapper {
+  width: 50%; /* Set title wrapper to occupy 50% of the width */
+  position: relative; /* Relative positioning to handle tooltip */
+}
+
+/* Truncated title styling */
+.truncate-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  width: 100%; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+/* Tooltip styling */
+.title-tooltip {
+  visibility: hidden; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: -35px; 
+  left: 0;
+  width: auto;
+  max-width: 300px; 
+  z-index: 1;
+  white-space: nowrap; 
+  overflow: visible; 
+  text-overflow: clip; 
+}
+
+
+.title-wrapper:hover .title-tooltip {
+  visibility: visible;
+}
+
+.view-listing-button {
+  background-color: #3f5e2d;
+  color: white;
+  border: none;
+  padding: 5px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%; 
+  text-align: center;
+}
+
+.view-listing-icon {
+  margin-left: 5px;
+}
+
+
+
+.venture-title h3:hover {
+  cursor: pointer; 
+}
+
+
+.location-icon img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.venture-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.location-date,
+.listing-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+;
+}
+
+.location-date p,
+.listing-price p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.listing-price span{
+  font-size: 16px;
+  font-weight:600 ;
+}
+
+.location-date p:first-child,
+.listing-price p:first-child {
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .view-all-button1 {
+      position: static; 
+      margin-top: 20px; 
+  }
+}
