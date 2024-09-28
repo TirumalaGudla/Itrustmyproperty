@@ -3,6 +3,9 @@ import './Header.css';
 import { HiOutlineHandRaised } from "react-icons/hi2";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { initializeApp } from 'firebase/app';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyDAwfPttzrU9hve3fJ7QReSjTakbzoabAs",
@@ -32,6 +35,8 @@ const handleGoogleSignIn = async () => {
 function Header() {
   const [isSigninPopupOpen, setSigninPopupOpen] = useState(false);
   const [isSignupPopupOpen, setSignupPopupOpen] = useState(false);
+  const [isRealtorPopupOpen, setRealtorPopupOpen] = useState(false); // New state for Realtor Registration
+
   const [isNavLinksActive, setNavLinksActive] = useState(false);
   const [isAdditionalFieldsVisible, setAdditionalFieldsVisible] = useState(false);
   const [showOTPSection, setShowOTPSection] = useState(false);
@@ -64,6 +69,9 @@ function Header() {
     if (event.target.className.includes('popup')) {
       setSigninPopupOpen(false);
       setSignupPopupOpen(false);
+      setRealtorPopupOpen(false); 
+      
+
     }
   };
 
@@ -95,8 +103,16 @@ function Header() {
     setShowModal(false);
   };
 
-
-
+  
+ 
+  
+  const handleRealtorSubmit = (e) => {
+    e.preventDefault();
+    // Display the toast notification
+    toast.success("Realtor registration successfully submitted!");
+  
+    // Additional form submission logic can go here...
+  };
 
   return (
     <div onClick={closePopups}>
@@ -108,6 +124,9 @@ function Header() {
         <ul className={`nav-links ${isNavLinksActive ? 'active' : ''}`} id="navLinks">
           <li><button id="signinBtn" onClick={openSigninPopup}>Sign In</button></li>
           <li><button id="signupBtn" onClick={openSignupPopup}>Sign Up</button></li>
+          <li><button id="" >Venture Registration</button></li>
+          <li><button id="registerBtn" onClick={() => setRealtorPopupOpen(true)}>Realtor Registration</button></li>
+
           <li><button id="registerBtn">Raise a Request <HiOutlineHandRaised style={{ marginBottom: "-4px", fontSize: "18px" }} /></button></li>
         </ul>
       </nav>
@@ -270,6 +289,50 @@ function Header() {
           </div>
         </div>
       )}
+
+{isRealtorPopupOpen && (
+  <div id="realtorPopup" className="popup2 active">
+    <div className="popup-content2">
+         
+      {/* Form fields as per your image */}
+      <form class="realtor-registration" onSubmit={handleRealtorSubmit}>
+    <h2>Relator Registration</h2>
+
+    <label for="company-name">Company Name</label>
+    <input id="company-name" type="text" placeholder="Enter company name" />
+
+    <label for="company-type">Company Type</label>
+    <input id="company-type" type="text" placeholder="Enter company type" />
+
+    <label for="properter-name">Properter Name</label>
+    <input id="properter-name" type="text" placeholder="Enter properter name" />
+
+    <label for="md-name">MD Name</label>
+    <input id="md-name" type="text" placeholder="Enter MD name" />
+
+    <label for="incorporated-year">Year Of Incorporated</label>
+    <input id="incorporated-year" type="text" placeholder="Enter year of incorporation" />
+
+    <label for="contact-number">Contact Number</label>
+    <input id="contact-number" type="text" placeholder="Enter contact number" />
+
+    <label for="email-id">E-Mail Id</label>
+    <input id="email-id" type="email" placeholder="Enter email address" />
+
+    <label for="head-office-address">Head Office Address</label>
+    <textarea id="head-office-address" placeholder="Enter head office address"></textarea>
+
+    <label for="alt-mobile-no">Alternative Mobile No</label>
+    <input id="alt-mobile-no" type="text" placeholder="Enter alternative mobile number" />
+
+    <button class="submit-btn" type="submit">Submit</button>
+</form>
+
+    </div>
+  </div>
+)}
+<ToastContainer position="bottom-right" />
+
     </div>
   );
 }
