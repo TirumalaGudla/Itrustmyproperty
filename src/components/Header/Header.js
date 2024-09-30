@@ -415,7 +415,7 @@ function Header() {
 
                             <label htmlFor="company-type">Company Type</label>
                             {/* <input id="company-type" type="text" placeholder="Enter company type" name="company_type" /> */}
-                            <select id="company-type" name="company_type">
+                            <select id="company-type" name="company_type" value={realtorFormData.company_type}>
                                 <option value="" disabled selected>
                                     Company Type
                                 </option>
