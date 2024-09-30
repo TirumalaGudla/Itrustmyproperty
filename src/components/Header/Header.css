@@ -1,38 +1,39 @@
 /* Base styles for the entire document */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     letter-spacing: 1px;
-  }
-  
-  nav {
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #f8f8f8;
     padding: 2px 20px;
-  }
-  
-  .logo img {
+}
+
+.logo img {
     height: 80px;
-  }
-  
-  .hamburger {
+}
+
+.hamburger {
     display: none;
     font-size: 24px;
     color: black;
     cursor: pointer;
-  }
-  
-  .nav-links {
+}
+
+.nav-links {
     list-style: none;
     display: flex;
     gap: 15px;
-  }
-  
-  .nav-links button {
+}
+
+.nav-links button {
     background-color: #3f5e2d;
     color: white;
     border: none;
@@ -40,17 +41,17 @@ body, html {
     cursor: pointer;
     border-radius: 10px;
     font-weight: 100;
-  }
-  
-  .nav-links button:hover {
+}
+
+.nav-links button:hover {
     background-color: #415e31;
-  }
-  .hand-btn{
+}
+.hand-btn {
     flex-direction: row;
     border: 2px solid red;
-  }
-  
-  .popup {
+}
+
+.popup {
     display: none;
     position: fixed;
     z-index: 1;
@@ -59,59 +60,54 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     justify-content: center;
     align-items: center;
-    
-  }
-  
-  .popup.active {
+}
+
+.popup.active {
     display: flex;
-  }
-  
-  .popup-content {
+}
+
+.popup-content {
     background-color: white;
     margin: 5% auto;
     padding: 50px 40px;
     border: 1px solid #f21a1a;
- 
+
     width: 300px;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-  }
-  
-  form {
+}
+
+form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-  }
+}
 
-  
-  form h2 {
+form h2 {
     text-align: center;
-    
-   font-weight: 500;
-  }
-  
 
-  
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  select {
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
-   
-    box-sizing: border-box;
-  }
-  
-  input[type="checkbox"] {
-    margin-right: 10px;
-  }
 
-  
-  button.small-button {
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button.small-button {
     background-color: #3f5e2d;
     color: white;
     padding: 10px 20px;
@@ -119,254 +115,250 @@ body, html {
     cursor: pointer;
     border-radius: 5px;
     width: max-content;
-  }
-  
-        .form-group {
-            display: flex;
-            justify-content: space-between;
-            gap: 5px;
-        }
+}
 
-        .form-group div {
-            flex: 1;
-            
-        }
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
 
-        .form-group div:last-child {
-            margin-right: 0;
-        }
+.form-group div {
+    flex: 1;
+}
 
-        .form-group1 {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            gap: 5px;
-        }
+.form-group div:last-child {
+    margin-right: 0;
+}
 
-        .form-group1 .code {
-            flex: 1;
-        }
+.form-group1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 5px;
+}
 
-        .form-group1 .mobilecss {
-            flex: 2;
-        }
+.form-group1 .code {
+    flex: 1;
+}
 
-       
-      
+.form-group1 .mobilecss {
+    flex: 2;
+}
 
-        .otp-inputs input {
-            width: 30px;
-            margin-right: 5px;
-        }
+.otp-inputs input {
+    width: 30px;
+    margin-right: 5px;
+}
 
-        @media (max-width: 767px) {
-            .otp-inputs input {
-                width: 15px;
-                margin-right: 5px;
-            }
-        }
+@media (max-width: 767px) {
+    .otp-inputs input {
+        width: 15px;
+        margin-right: 5px;
+    }
+}
 
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
 
-        .checkbox-container {
-            display: flex;
-            align-items: center;
-        }
+.checkbox-container input {
+    margin-right: 5px;
+}
 
-        .checkbox-container input {
-            margin-right: 5px;
-        }
+.small-button1 {
+    text-align: center;
+}
 
-     
-
-        .small-button1 {
-            text-align: center;
-        }
-    
-  
-  .otp-inputs {
+.otp-inputs {
     display: flex;
     gap: 10px;
-  }
-  
-  .otp-inputs input {
+}
+
+.otp-inputs input {
     width: 25%;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #3f5e2d;
     text-align: center;
-  }
-  
-  .checkbox-container {
+}
+
+.checkbox-container {
     display: flex;
     align-items: center;
-  }
-  
-  .checkbox-container label {
-    margin: 0;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .hamburger {
-      display: block;
-    }
-  
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: #f8f8f8;
-      width: 100%;
-      padding: 10px;
-    }
-  
-    .nav-links.active {
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-color: #f8f8f8;
-      height: auto;
-      transition: max-height 0.3s ease-in-out;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-    }
-  
-    .otp-container {
-      flex-direction: column;
-      gap: 5px;
-    }
-  
-    .otp-inputs {
-      width: 100%;
-      gap: 5px;
-    }
-  
-    .otp-inputs input {
-      width: 100%;
-    }
-  
-    .popup-content {
-      width: 90%;
-      padding: 20px;
-      margin: 10px;
-    }
-  }
-  
+}
 
-  /* General form styles */
+.checkbox-container label {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #f8f8f8;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #f8f8f8;
+        height: auto;
+        transition: max-height 0.3s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    }
+
+    .otp-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .otp-inputs {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .otp-inputs input {
+        width: 100%;
+    }
+
+    .popup-content {
+        width: 90%;
+        padding: 20px;
+        margin: 10px;
+    }
+}
+
+/* General form styles */
 #signupForm {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 #signupForm label {
-  font-size: 14px;
- 
- 
+    font-size: 14px;
 }
 label {
-  display: block;
-  margin-bottom: 10px;
+    display: block;
+    margin-bottom: 10px;
 }
 
-
 #signupForm input {
-  width: 100%;
-  padding: 8px;
- 
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    width: 100%;
+    padding: 8px;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 /* Full Name Field */
 #fullName {
-  width: 100%;
+    width: 100%;
 }
 
 /* Mobile Field Group - Aligning country code and number */
 .form-group1 {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .form-group2 {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 #countryCode {
-  width: max-content;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    width: max-content;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 #mobile {
-  flex-grow: 1;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 /* OTP input styling */
 .otp-container {
-  display: flex;
-  gap: 30px;
-  flex-direction: column;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
 }
 
 .otp-inputs input {
-  width: 40px;
-  padding: 10px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    width: 40px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .small-button {
-  background-color: #3f5e2d;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
-  cursor: pointer;
+    background-color: #3f5e2d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .small-button:hover {
-  background-color: #3f5e2d;
+    background-color: #3f5e2d;
 }
 .otp-line {
-  border-bottom: 1px solid black; /* Define a uniform black border for the bottom */
+    border-bottom: 1px solid black; /* Define a uniform black border for the bottom */
 }
 
 /* If you want the same border on all sides */
-input, select {
-  border: 1px solid #ccc; /* Use a light gray border for a consistent look */
-  outline: none; /* Remove the blue outline when clicked */
+input,
+select {
+    border: 1px solid #ccc; /* Use a light gray border for a consistent look */
+    outline: none; /* Remove the blue outline when clicked */
 }
 
 .resend-otp-button,
 .small-button {
-  border: 1px solid #3f5e2d; /* Green border */
-  background-color: #3f5e2d; /* Ensure background color matches */
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
+    border: 1px solid #3f5e2d; /* Green border */
+    background-color: #3f5e2d; /* Ensure background color matches */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-#realtorPopup{
-  position: absolute;
+#realtorPopup {
+    position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 111;
-}
+    z-index: 5;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
 
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
 
 /* Specific styles for the realtor registration form */
 /* .popup2 {
@@ -388,90 +380,86 @@ input, select {
   display: flex;
 } */
 .realtor-registration {
-  /* display: grid; */
-  grid-template-columns: 1fr 1fr;
-  /* gap: 20px; */
-  max-width: 600px;
-  border: 2px solid red;
-  background-color: white;
-  margin: 5% auto;
-  padding: 50px 40px;
-  border: 1px solid #f21a1a;
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr;
+    /* gap: 20px; */
+    max-width: 600px;
+    /* border: 2px solid red; */
+    background-color: white;
+    margin: 5% auto;
+    padding: 50px 40px;
 
-  width: 300px;
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    width: 300px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
-
-
 
 .realtor-registration h2 {
-  grid-column: span 2;
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 20px;
+    grid-column: span 2;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
-.popup-content2 form{
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-
+.popup-content2 form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 .realtor-registration label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
-  margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
 }
 
 .realtor-registration input[type="text"],
 .realtor-registration input[type="email"],
 .realtor-registration textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #9db493; /* Light green border */
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-size: 14px;
-  margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #9db493; /* Light green border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
 .realtor-registration textarea {
-  resize: vertical;
-  height: 80px; /* For the Head Office Address */
+    resize: vertical;
+    height: 80px; /* For the Head Office Address */
 }
 
-.realtor-registration input::placeholder, 
+.realtor-registration input::placeholder,
 .realtor-registration textarea::placeholder {
-  color: #b3b3b3;
+    color: #b3b3b3;
 }
 
 .realtor-registration .submit-btn {
-  grid-column: span 2;
-  background-color: #3f5e2d;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: center;
+    grid-column: span 2;
+    background-color: #3f5e2d;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
 }
 
 .realtor-registration .submit-btn:hover {
-  background-color: #2f4e1f;
+    background-color: #2f4e1f;
 }
 
 @media (max-width: 768px) {
-  .realtor-registration {
-      grid-template-columns: 1fr;
-  }
+    .realtor-registration {
+        grid-template-columns: 1fr;
+    }
 
-  .realtor-registration h2 {
-      font-size: 20px;
-  }
+    .realtor-registration h2 {
+        font-size: 20px;
+    }
 
-  .realtor-registration .submit-btn {
-      width: 100%;
-  }
+    .realtor-registration .submit-btn {
+        width: 100%;
+    }
 }
