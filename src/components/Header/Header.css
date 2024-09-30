@@ -344,6 +344,14 @@ select {
     border-radius: 5px;
 }
 
+#dob {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
 #realtorPopup {
     position: absolute;
     top: 0;

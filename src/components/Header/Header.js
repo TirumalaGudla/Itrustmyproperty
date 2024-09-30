@@ -40,6 +40,8 @@ function Header() {
     const [showOTPSection, setShowOTPSection] = useState(false);
     const [timer, setTimer] = useState(30);
 
+    const [realtorFormData, setRealtorFormData] = useState({});
+
     useEffect(() => {
         let countdown;
         if (showOTPSection && timer > 0) {
@@ -131,6 +133,14 @@ function Header() {
         setRealtorPopupOpen(false);
 
         // Additional form submission logic can go here...
+    };
+
+    const handleRealtorChange = (e) => {
+        const { name, value } = e.target;
+        setRealtorFormData((prevFormData) => ({
+            ...prevFormData,
+            [name]: value,
+        }));
     };
 
     return (
@@ -354,7 +364,13 @@ function Header() {
 
                                 <div className="mrb">
                                     <label htmlFor="dob">DOB</label>
-                                    <input type="text" id="dob" placeholder="mm/dd/yyyy" required />
+                                    <input
+                                        type="date"
+                                        id="dob"
+                                        placeholder="mm/dd/yyyy"
+                                        required
+                                        onClick={(e) => e.target.showPicker()}
+                                    />
                                 </div>
 
                                 <div className="mrb">
@@ -388,25 +404,45 @@ function Header() {
             {isRealtorPopupOpen && (
                 <div id="realtorPopup" className="popup2 active">
                     <div className="popup-content2">
-                        <form className="realtor-registration" onSubmit={handleRealtorSubmit}>
+                        <form
+                            className="realtor-registration"
+                            onSubmit={handleRealtorSubmit}
+                            onChange={handleRealtorChange}>
                             <h2>Realtor Registration</h2>
 
                             <label htmlFor="company-name">Company Name</label>
                             <input id="company-name" type="text" placeholder="Enter company name" name="company_name" />
 
                             <label htmlFor="company-type">Company Type</label>
-                            <input id="company-type" type="text" placeholder="Enter company type" name="company_type" />
+                            {/* <input id="company-type" type="text" placeholder="Enter company type" name="company_type" /> */}
+                            <select id="company-type" name="company_type">
+                                <option value="" disabled selected>
+                                    Company Type
+                                </option>
+                                <option value="Private.Ltd">Private. Ltd</option>
+                                <option value="LLP">LLP</option>
+                                <option value="Proprietorship">Proprietorship</option>
+                            </select>
 
-                            <label htmlFor="properter-name">Properter Name</label>
-                            <input
-                                id="properter-name"
-                                type="text"
-                                placeholder="Enter properter name"
-                                name="properter_name"
-                            />
+                            {(realtorFormData.company_type === "LLP" ||
+                                realtorFormData.company_type === "Private.Ltd") && (
+                                <>
+                                    <label htmlFor="md-name">MD Name</label>
+                                    <input id="md-name" type="text" placeholder="Enter MD name" name="md_name" />
+                                </>
+                            )}
 
-                            <label htmlFor="md-name">MD Name</label>
-                            <input id="md-name" type="text" placeholder="Enter MD name" name="md_name" />
+                            {realtorFormData.company_type === "Proprietorship" && (
+                                <>
+                                    <label htmlFor="properter-name">Properter Name</label>
+                                    <input
+                                        id="properter-name"
+                                        type="text"
+                                        placeholder="Enter properter name"
+                                        name="properter_name"
+                                    />
+                                </>
+                            )}
 
                             <label htmlFor="incorporated-year">Year Of Incorporated</label>
                             <input
