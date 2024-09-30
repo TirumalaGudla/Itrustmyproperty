@@ -291,47 +291,45 @@ function Header() {
       )}
 
 {isRealtorPopupOpen && (
-  <div id="realtorPopup" className="popup2 active">
-    <div className="popup-content2">
-         
-      {/* Form fields as per your image */}
-      <form class="realtor-registration" onSubmit={handleRealtorSubmit}>
-    <h2>Relator Registration</h2>
+        <div id="realtorPopup" className="popup2 active">
+          <div className="popup-content2">
+            <form className="realtor-registration" onSubmit={handleRealtorSubmit}>
+              <h2>Realtor Registration</h2>
 
-    <label for="company-name">Company Name</label>
-    <input id="company-name" type="text" placeholder="Enter company name" />
+              <label htmlFor="company-name">Company Name</label>
+              <input id="company-name" type="text" placeholder="Enter company name" />
 
-    <label for="company-type">Company Type</label>
-    <input id="company-type" type="text" placeholder="Enter company type" />
+              <label htmlFor="company-type">Company Type</label>
+              <input id="company-type" type="text" placeholder="Enter company type" />
 
-    <label for="properter-name">Properter Name</label>
-    <input id="properter-name" type="text" placeholder="Enter properter name" />
+              <label htmlFor="properter-name">Properter Name</label>
+              <input id="properter-name" type="text" placeholder="Enter properter name" />
 
-    <label for="md-name">MD Name</label>
-    <input id="md-name" type="text" placeholder="Enter MD name" />
+              <label htmlFor="md-name">MD Name</label>
+              <input id="md-name" type="text" placeholder="Enter MD name" />
 
-    <label for="incorporated-year">Year Of Incorporated</label>
-    <input id="incorporated-year" type="text" placeholder="Enter year of incorporation" />
+              <label htmlFor="incorporated-year">Year Of Incorporated</label>
+              <input id="incorporated-year" type="text" placeholder="Enter year of incorporation" />
 
-    <label for="contact-number">Contact Number</label>
-    <input id="contact-number" type="text" placeholder="Enter contact number" />
+              <label htmlFor="contact-number">Contact Number</label>
+              <input id="contact-number" type="text" placeholder="Enter contact number" />
 
-    <label for="email-id">E-Mail Id</label>
-    <input id="email-id" type="email" placeholder="Enter email address" />
+              <label htmlFor="email-id">E-Mail Id</label>
+              <input id="email-id" type="email" placeholder="Enter email address" />
 
-    <label for="head-office-address">Head Office Address</label>
-    <textarea id="head-office-address" placeholder="Enter head office address"></textarea>
+              <label htmlFor="head-office-address">Head Office Address</label>
+              <textarea id="head-office-address" placeholder="Enter head office address"></textarea>
 
-    <label for="alt-mobile-no">Alternative Mobile No</label>
-    <input id="alt-mobile-no" type="text" placeholder="Enter alternative mobile number" />
+              <label htmlFor="alt-mobile-no">Alternative Mobile No</label>
+              <input id="alt-mobile-no" type="text" placeholder="Enter alternative mobile number" />
 
-    <button class="submit-btn" type="submit">Submit</button>
-</form>
+              <button className="submit-btn" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      )}
 
-    </div>
-  </div>
-)}
-<ToastContainer position="bottom-right" />
+      <ToastContainer position="bottom-right" />
 
     </div>
   );
