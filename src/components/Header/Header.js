@@ -101,24 +101,19 @@ function Header() {
     const handleRealtorSubmit = (e) => {
         e.preventDefault();
 
-        const formData = new FormData(e.target);
         const {
             company_name,
             company_type,
-            properter_name,
-            md_name,
             incorporated_year,
             contact_number,
             email_id,
             head_office_address,
             alt_mobile_no,
-        } = Object.fromEntries(formData);
+        } = realtorFormData;
 
         if (
             !company_name ||
             !company_type ||
-            !properter_name ||
-            !md_name ||
             !incorporated_year ||
             !contact_number ||
             !email_id ||
@@ -127,6 +122,18 @@ function Header() {
         ) {
             toast.error("Please fill all the required fields.");
             return;
+        }
+
+        if (realtorFormData.company_type !== "" && realtorFormData.type !== "Proprietorship") {
+            if (!realtorFormData.md_name) {
+                toast.error("Please enter MD name.");
+                return;
+            }
+        } else if (realtorFormData.type === "Proprietorship") {
+            if (!realtorFormData.properter_name) {
+                toast.error("Please enter properter name.");
+                return;
+            }
         }
         // Display the toast notification
         toast.success("Realtor registration successfully submitted!");
