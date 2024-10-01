@@ -410,85 +410,82 @@ function Header() {
 
             {isRealtorPopupOpen && (
                 <div id="realtorPopup" className="popup2 active">
-                    <div className="popup-content2">
-                        <form
-                            className="realtor-registration"
-                            onSubmit={handleRealtorSubmit}
-                            onChange={handleRealtorChange}>
-                            <h2>Realtor Registration</h2>
+                    <form
+                        className="realtor-registration"
+                        onSubmit={handleRealtorSubmit}
+                        onChange={handleRealtorChange}>
+                        <h2>Realtor Registration</h2>
 
-                            <label htmlFor="company-name">Company Name</label>
-                            <input id="company-name" type="text" placeholder="Enter company name" name="company_name" />
+                        <label htmlFor="company-name">Company Name</label>
+                        <input id="company-name" type="text" placeholder="Enter company name" name="company_name" />
 
-                            <label htmlFor="company-type">Company Type</label>
-                            {/* <input id="company-type" type="text" placeholder="Enter company type" name="company_type" /> */}
-                            <select id="company-type" name="company_type" value={realtorFormData.company_type}>
-                                <option value="" disabled selected>
-                                    Company Type
-                                </option>
-                                <option value="Private.Ltd">Private. Ltd</option>
-                                <option value="LLP">LLP</option>
-                                <option value="Proprietorship">Proprietorship</option>
-                            </select>
+                        <label htmlFor="company-type">Company Type</label>
+                        {/* <input id="company-type" type="text" placeholder="Enter company type" name="company_type" /> */}
+                        <select id="company-type" name="company_type" value={realtorFormData.company_type}>
+                            <option value="" disabled selected>
+                                Company Type
+                            </option>
+                            <option value="Private.Ltd">Private. Ltd</option>
+                            <option value="LLP">LLP</option>
+                            <option value="Proprietorship">Proprietorship</option>
+                        </select>
 
-                            {(realtorFormData.company_type === "LLP" ||
-                                realtorFormData.company_type === "Private.Ltd") && (
-                                <>
-                                    <label htmlFor="md-name">MD Name</label>
-                                    <input id="md-name" type="text" placeholder="Enter MD name" name="md_name" />
-                                </>
-                            )}
+                        {(realtorFormData.company_type === "LLP" || realtorFormData.company_type === "Private.Ltd") && (
+                            <>
+                                <label htmlFor="md-name">MD Name</label>
+                                <input id="md-name" type="text" placeholder="Enter MD name" name="md_name" />
+                            </>
+                        )}
 
-                            {realtorFormData.company_type === "Proprietorship" && (
-                                <>
-                                    <label htmlFor="properter-name">Properter Name</label>
-                                    <input
-                                        id="properter-name"
-                                        type="text"
-                                        placeholder="Enter properter name"
-                                        name="properter_name"
-                                    />
-                                </>
-                            )}
+                        {realtorFormData.company_type === "Proprietorship" && (
+                            <>
+                                <label htmlFor="properter-name">Properter Name</label>
+                                <input
+                                    id="properter-name"
+                                    type="text"
+                                    placeholder="Enter properter name"
+                                    name="properter_name"
+                                />
+                            </>
+                        )}
 
-                            <label htmlFor="incorporated-year">Year Of Incorporated</label>
-                            <input
-                                id="incorporated-year"
-                                type="text"
-                                placeholder="Enter year of incorporation"
-                                name="incorporated_year"
-                            />
+                        <label htmlFor="incorporated-year">Year Of Incorporated</label>
+                        <input
+                            id="incorporated-year"
+                            type="text"
+                            placeholder="Enter year of incorporation"
+                            name="incorporated_year"
+                        />
 
-                            <label htmlFor="contact-number">Contact Number</label>
-                            <input
-                                id="contact-number"
-                                type="text"
-                                placeholder="Enter contact number"
-                                name="contact_number"
-                            />
+                        <label htmlFor="contact-number">Contact Number</label>
+                        <input
+                            id="contact-number"
+                            type="text"
+                            placeholder="Enter contact number"
+                            name="contact_number"
+                        />
 
-                            <label htmlFor="email-id">E-Mail Id</label>
-                            <input id="email-id" type="email" placeholder="Enter email address" name="email_id" />
+                        <label htmlFor="email-id">E-Mail Id</label>
+                        <input id="email-id" type="email" placeholder="Enter email address" name="email_id" />
 
-                            <label htmlFor="head-office-address">Head Office Address</label>
-                            <textarea
-                                id="head-office-address"
-                                placeholder="Enter head office address"
-                                name="head_office_address"></textarea>
+                        <label htmlFor="head-office-address">Head Office Address</label>
+                        <textarea
+                            id="head-office-address"
+                            placeholder="Enter head office address"
+                            name="head_office_address"></textarea>
 
-                            <label htmlFor="alt-mobile-no">Alternative Mobile No</label>
-                            <input
-                                id="alt-mobile-no"
-                                type="text"
-                                placeholder="Enter alternative mobile number"
-                                name="alt_mobile_no"
-                            />
+                        <label htmlFor="alt-mobile-no">Alternative Mobile No</label>
+                        <input
+                            id="alt-mobile-no"
+                            type="text"
+                            placeholder="Enter alternative mobile number"
+                            name="alt_mobile_no"
+                        />
 
-                            <button className="submit-btn" type="submit">
-                                Submit
-                            </button>
-                        </form>
-                    </div>
+                        <button className="submit-btn" type="submit">
+                            Submit
+                        </button>
+                    </form>
                 </div>
             )}
 
