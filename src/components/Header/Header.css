@@ -101,6 +101,7 @@ select {
     border-radius: 5px;
 
     box-sizing: border-box;
+    margin-bottom: 10px;
 }
 
 input[type="checkbox"] {
