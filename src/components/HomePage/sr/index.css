@@ -103,6 +103,8 @@ select {
   border: 1px solid #ced4da;
   height: 40px;
   color:#8c8c8c;
+  margin-bottom: 10px;   
+  /* added extra */
 }
 
 .price-range {
