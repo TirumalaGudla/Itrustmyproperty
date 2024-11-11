@@ -1,18 +1,18 @@
 .top-ventures-wrapper1 {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
+  /* padding: 40px 20px; */
+  /* background-color: #f9f9f9; */
 }
 
 .heading-wrapper1 {
   text-align: center;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   position: relative;
 }
 
 .heading-wrapper1 h2 {
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .heading-line1 {
@@ -40,9 +40,10 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; /* For responsiveness */
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px; */
   /* border: 2px solid red; */
- background-color: #D9D9D9;
+ background-color: white;
  margin: 30px 20px;
 
  border-radius: 10px
@@ -117,12 +118,13 @@
   align-items: center;
   text-align: center;
   flex: 1; /* Allow the sections to take equal space */
+  /* border: 2px solid red; */
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .listing-info {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 }
 
@@ -147,6 +149,8 @@
   display: flex;
   gap: 15px;
   flex-wrap: wrap; /* Ensure the buttons wrap on smaller screens */
+  align-items: center;
+    justify-content: center;
 }
 
 .highlight-buttons button {
