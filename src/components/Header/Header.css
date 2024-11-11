@@ -13,11 +13,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #f8f8f8;
-    padding: 2px 20px;
+    padding: 0px 20px;
+    height: 12vh;
 }
 
 .logo img {
-    height: 80px;
+    width: 150px;
 }
 
 .hamburger {
@@ -212,6 +213,7 @@ button.small-button {
     }
 
     .nav-links.active {
+        margin: 0;
         z-index: 1;
         display: flex;
         justify-content: center;

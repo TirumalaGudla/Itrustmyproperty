@@ -1,0 +1,107 @@
+.ventures-list {
+    padding: 100px 20px 20px 20px;
+}
+
+.list-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+}
+
+.under-line {
+    width: 300px;
+    border: none;
+    border-top: 2px solid #3f5e2d;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.short {
+    width: 200px;
+}
+
+.venture-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 30px 0;
+}
+
+@media (max-width: 576px) {
+    .ventures-list {
+        padding: 100px 20px 20px 20px;
+    }
+
+    .list-title {
+        font-size: 25px;
+    }
+
+    .under-line {
+        width: 200px;
+        margin-bottom: 8px;
+    }
+    .short {
+        width: 100px;
+    }
+
+    .venture-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        padding: 30px 0;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .ventures-list {
+        padding: 100px 20px 20px 20px;
+        display: grid;
+    }
+
+    .list-title {
+        font-size: 30px;
+    }
+
+    .under-line {
+        width: 200px;
+        margin-bottom: 8px;
+    }
+    .short {
+        width: 100px;
+    }
+
+    .venture-list {
+        gap: 20px;
+        padding: 30px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .ventures-list {
+        padding: 100px 20px 20px 20px;
+        display: grid;
+    }
+
+    .list-title {
+        font-size: 30px;
+    }
+
+    .under-line {
+        width: 200px;
+        margin-bottom: 8px;
+    }
+    .short {
+        width: 100px;
+    }
+
+    .venture-list {
+        gap: 20px;
+        padding: 30px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}

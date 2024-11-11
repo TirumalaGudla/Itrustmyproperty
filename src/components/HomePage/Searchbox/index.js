@@ -1,6 +1,6 @@
 // import React from 'react';
 // import './index.css';
-// import { FaSearch } from 'react-icons/fa'; 
+// import { FaSearch } from 'react-icons/fa';
 
 // const Searchbox = () => {
 //   return (
@@ -55,75 +55,65 @@
 
 // export default Searchbox;
 
-import React, { useState } from 'react';
-import './index.css';
-import { FaSearch } from 'react-icons/fa'; // Import search icon
+import React, { useState } from "react";
+import "./index.css";
+import { FaSearch } from "react-icons/fa"; // Import search icon
 
 const Searchbox = () => {
-  const [priceRange, setPriceRange] = useState([10000, 53700]); // Default price range
+    const [priceRange, setPriceRange] = useState([10000, 53700]); // Default price range
 
-  const handleRangeChange = (e, index) => {
-    const newRange = [...priceRange];
-    newRange[index] = e.target.value;
-    setPriceRange(newRange);
-  };
+    const handleRangeChange = (e, index) => {
+        const newRange = [...priceRange];
+        newRange[index] = e.target.value;
+        setPriceRange(newRange);
+    };
 
-  return (
-    <div className="searchbox-wrapper">
-      <div className="background-image-container">
-        <div className="overlay-content">
-          <span>Legally Verified</span>
-          <br />
-          <span>Ventures</span>
-        </div>
-      </div>
-      <div className="searchbox-container">
-        <h2>Search For Your Property</h2>
-        <div className="searchbox-form">
-       
-          <select className="searchbox-select">
-            <option value="">Location</option>
-            <option value="guntur">Guntur</option>
-            <option value="hyderabad">Hyderabad</option>
-            <option value="bangalore">Bangalore</option>
-            <option value="vijayawada">Vijayawada</option>
-            <option value="chennai">Chennai</option>
-            <option value="kolkata">Kolkata</option>
-            <option value="mumbai">Mumbai</option>
-            <option value="delhi">Delhi</option>
-            <option value="pune">Pune</option>
-            <option value="ahmedabad">Ahmedabad</option>
-          </select>
+    return (
+        <div className="searchbox-wrapper">
+            <div className="background-image-container">
+                <div className="overlay-content">
+                    <span>Legally Verified</span>
+                    <br />
+                    <span>Ventures</span>
+                </div>
+            </div>
+            <div className="searchbox-container">
+                <h2>Search For Your Property</h2>
+                <div className="searchbox-form">
+                    <select className="searchbox-select">
+                        <option value="">Location</option>
+                        <option value="guntur">Guntur</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="vijayawada">Vijayawada</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="kolkata">Kolkata</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="pune">Pune</option>
+                        <option value="ahmedabad">Ahmedabad</option>
+                    </select>
 
-  
-          <div className="searchbox-input-wrapper">
-            <input
-              type="text"
-              className="searchbox-input"
-              placeholder="Venture Name"
-            />
-            <FaSearch className="searchbox-input-icon" />
-          </div>
+                    <div className="searchbox-input-wrapper">
+                        <input type="text" className="searchbox-input" placeholder="Venture Name" />
+                        <FaSearch className="searchbox-input-icon" />
+                    </div>
 
+                    <select className="searchbox-select">
+                        <option value="">Approved By</option>
+                        <option value="DCD">DCD</option>
+                        <option value="DAD">DAD</option>
+                        <option value="DTC">DTC</option>
+                        <option value="ARR">ARR</option>
+                    </select>
 
-          <select className="searchbox-select">
-            <option value="">Approved By</option>
-            <option value="DCD">DCD</option>
-            <option value="DAD">DAD</option>
-            <option value="DTC">DTC</option>
-            <option value="ARR">ARR</option>
-          </select>
+                    <button className="searchbox-button">
+                        Search Now
+                        <FaSearch className="searchbox-button-icon" />
+                    </button>
+                </div>
 
-        
-
-    
-          <button className="searchbox-button">
-            Search Now
-            <FaSearch className="searchbox-button-icon" /> 
-          </button>
-        </div>
-        
-          {/* <div className="price-range">
+                {/* <div className="price-range">
             <label htmlFor="priceRange">
               Price Range: 
               <span style={{ marginLeft: '30px', fontSize: '12px', fontWeight: '500' }}>
@@ -160,9 +150,9 @@ const Searchbox = () => {
               {Math.round(priceRange[1] / 1000)}K
             </p>
           </div> */}
-      </div>
-    </div>
-  );
+            </div>
+        </div>
+    );
 };
 
 export default Searchbox;
