@@ -3,8 +3,8 @@ import "./Header.css";
 import { HiOutlineHandRaised } from "react-icons/hi2";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import toast from "react-hot-toast";
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyDAwfPttzrU9hve3fJ7QReSjTakbzoabAs",
@@ -90,8 +90,8 @@ function Header() {
         setShowModal(true);
     };
     const handleClose = () => {
-        setSigninPopupOpen(false); // Close the Sign In popup
-        setSignupPopupOpen(false); // Close the Sign Up popup (if needed)
+        setSigninPopupOpen(false); 
+        setSignupPopupOpen(false); 
     };
 
     const handleCloseModal = () => {
@@ -120,23 +120,23 @@ function Header() {
             !head_office_address ||
             !alt_mobile_no
         ) {
-            toast.error("Please fill all the required fields.");
+            toast.error("Please fill all the required fields.",{id:"formerror"});
             return;
         }
 
         if (realtorFormData.company_type !== "" && realtorFormData.type !== "Proprietorship") {
             if (!realtorFormData.md_name) {
-                toast.error("Please enter MD name.");
+                toast.error("Please enter MD name.", {id:"success1"});
                 return;
             }
         } else if (realtorFormData.type === "Proprietorship") {
             if (!realtorFormData.properter_name) {
-                toast.error("Please enter properter name.");
+                toast.error("Please enter properter name.", {id:"success2"});
                 return;
             }
         }
         // Display the toast notification
-        toast.success("Realtor registration successfully submitted!");
+        toast.success("Realtor registration successfully submitted!", {id:"success"});
         setRealtorPopupOpen(false);
 
         // Additional form submission logic can go here...
@@ -170,9 +170,9 @@ function Header() {
                             Sign Up
                         </button>
                     </li>
-                    <li>
+                    {/* <li>
                         <button id="">Venture Registration</button>
-                    </li>
+                    </li> */}
                     <li>
                         <button id="registerBtn" onClick={() => setRealtorPopupOpen(true)}>
                             Realtor Registration
@@ -417,7 +417,7 @@ function Header() {
                         <h2>Realtor Registration</h2>
 
                         <label htmlFor="company-name">Company Name</label>
-                        <input id="company-name" type="text" placeholder="Enter company name" name="company_name" />
+                        <input id="company-name" type="text" placeholder="Enter company name" name="company_name"  value={realtorFormData.company_name}/>
 
                         <label htmlFor="company-type">Company Type</label>
                         {/* <input id="company-type" type="text" placeholder="Enter company type" name="company_type" /> */}
@@ -489,7 +489,7 @@ function Header() {
                 </div>
             )}
 
-            <ToastContainer position="bottom-right" />
+           
         </div>
     );
 }
