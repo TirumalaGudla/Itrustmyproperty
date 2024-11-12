@@ -1,43 +1,49 @@
 import React from "react";
 import "./index.css";
 
-const VentureListItem = () => {
+const VentureListItem = ({ venture }) => {
     return (
         <div className="venture-list-item">
-            <img src="/images/gunturList/ventures/venture_img.png" alt="" className="venture-img"  />
+            <img src={venture?.image} alt="venture-image" className="venture-img" />
             <div className="venture-info">
-                <h2 className="venture-title">LVR Gardens</h2>
+                <h2 className="venture-title">{venture?.title}</h2>
                 <p className="venture-location">
-                    <img src="/location.png" alt="location" className="location-icon" /> Residential Land/ Plot, Gorantla, Guntur
+                    <img src="/location.png" alt="location" className="location-icon" /> {venture?.location}
                 </p>
                 <div className="venture-stats">
-                    <div className="stat">
-                        <span className="value">
-                            ₹ 1.98 <span className="units">Cr</span>
-                        </span>
-                        <span className="value">
-                            ₹ 1.98 <span className="units">sq.ft</span>
-                        </span>
-                    </div>
-                    <div className="vertical-line"></div>
-                    <div className="stat">
-                        <span className="value">
-                            450.73<span className="units"> sq.ft</span>
-                        </span>
-                        <span className="stat-text">Plot Area</span>
-                    </div>
-                    <div className="vertical-line"></div>
-                    <div className="stat">
-                        <span className="stat-text">Plot/Land</span>
-                        <span className="stat-text">Ready to Move</span>
-                    </div>
+                    {venture?.stats?.map((stat) =>
+                        stat?.label ? (
+                            <div className="stat" key={stat?.id}>
+                                <span className="value">
+                                    {stat?.value}
+                                    <span className="units"> {stat?.unit}</span>
+                                </span>
+                                <span className="stat-text">{stat?.label}</span>
+                            </div>
+                        ) : stat?.statText1 ? (
+                            <div className="stat">
+                                <span className="stat-text">{stat?.statText1}</span>
+                                <span className="stat-text">{stat?.statText2}</span>
+                            </div>
+                        ) : (
+                            <div className="stat" key={stat?.id}>
+                                <span className="value">
+                                    {stat?.value1} <span className="units">{stat?.unit1}</span>
+                                </span>
+                                <span className="value">
+                                    {stat?.value2} <span className="units">{stat?.unit2}</span>
+                                </span>
+                            </div>
+                        )
+                    )}
                 </div>
                 <h3 className="highlights-title">Highlights:</h3>
                 <ul className="venture-highlights">
-                    <li className="highlight">East Facing</li>
-                    <li className="highlight">Overlooking Main Road</li>
-                    <li className="highlight">Near to Bus Stop</li>
-                    <li className="highlight">Near To School</li>
+                    {venture?.highlights?.map((highlight) => (
+                        <li className="highlight" key={highlight?.id}>
+                            {highlight?.label}
+                        </li>
+                    ))}
                 </ul>
                 <div className="ventrue-actions">
                     <button className="act-btn number">View Number</button>

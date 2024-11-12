@@ -1,5 +1,6 @@
 import React from "react";
 import VentureListItem from "./VentureListItem";
+import { gunturVentures } from "../../../../AppConfig";
 import "./index.css";
 
 const VenturesList = () => {
@@ -9,9 +10,9 @@ const VenturesList = () => {
             <hr className="under-line" />
             <hr className="under-line short" />
             <ul className="venture-list">
-                <VentureListItem />
-                <VentureListItem />
-                <VentureListItem />
+                {gunturVentures.map((venture) => (
+                    <VentureListItem key={venture?.id} venture={venture} />
+                ))}
             </ul>
         </div>
     );
