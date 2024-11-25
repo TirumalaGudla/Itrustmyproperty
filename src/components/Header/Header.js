@@ -152,7 +152,7 @@ function Header() {
 
     return (
         <div onClick={closePopups}>
-            <nav>
+            <nav className="navbar">
                 <div className="logo">
                     <img src="images/mlogo.png" alt="Logo" />
                 </div>

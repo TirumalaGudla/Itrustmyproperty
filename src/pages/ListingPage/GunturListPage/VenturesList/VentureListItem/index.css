@@ -51,6 +51,7 @@
     width: 80%;
     align-self: center;
     margin-block: 20px;
+    height: 40px !important;
 }
 
 .stat {

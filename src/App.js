@@ -1,25 +1,26 @@
-import React from 'react';
-import './App.css';
-import ListingPage from './components/ListingPage/ListingPage';
-import toast, { Toaster } from 'react-hot-toast';
-import SignIn from './components/SignIn';
-import HomePage from './components/HomePage/HomePage';
-import GunturListPage from './pages/ListingPage/GunturListPage';
-
+import React from "react";
+import "./App.css";
+import ListingPage from "./components/ListingPage/ListingPage";
+import toast, { Toaster } from "react-hot-toast";
+import SignIn from "./components/SignIn";
+import HomePage from "./components/HomePage/HomePage";
+import GunturListPage from "./pages/ListingPage/GunturListPage";
+import { Routes, Route, Navigate, Link } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="app-wrapper">
-     {/* <HomePage /> */}
-      {/* <ListingPage /> */}
-      <GunturListPage />
-      {/* <SignIn />  */}
-      <Toaster
-  position="bottom-right"
-  reverseOrder={false}
-/>
-    </div>
-  );
+    return (
+        <div className="app-wrapper">
+            <Routes>
+            {/* <Route path="/" element={<Navigate to="/login" />} /> */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/guntur-ventures" element={<ListingPage />} />
+            {/* <Route path="/" element={<ListingPage />} /> */}
+            {/* <GunturListPage /> */}
+            {/* <SignIn />  */}
+            </Routes>
+            <Toaster position="bottom-right" reverseOrder={false} />
+        </div>
+    );
 }
 
 export default App;
