@@ -6,6 +6,7 @@ import SignIn from "./components/SignIn";
 import HomePage from "./components/HomePage/HomePage";
 import GunturListPage from "./pages/ListingPage/GunturListPage";
 import { Routes, Route, Navigate, Link } from "react-router-dom";
+import SriSaravana from "./pages/SriSaravana";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             {/* <Route path="/" element={<Navigate to="/login" />} /> */}
             <Route path="/" element={<HomePage />} />
             <Route path="/guntur-ventures" element={<ListingPage />} />
+            <Route path="/sri-saravana" element={<SriSaravana />} />
             {/* <Route path="/" element={<ListingPage />} /> */}
             {/* <GunturListPage /> */}
             {/* <SignIn />  */}
