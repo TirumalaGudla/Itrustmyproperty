@@ -1,8 +1,7 @@
 .address-strip {
     padding: 30px 15vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .address-item {
@@ -26,4 +25,62 @@
 .address-val {
     font-size: 15px;
     font-weight: normal;
+    text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+    .address-strip {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .address-item {
+        gap: 5px;
+    }
+
+    .address-label {
+        font-size: 10px;
+    }
+    .address-val {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .address-strip {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .address-item {
+        gap: 5px;
+    }
+
+    .address-label {
+        font-size: 12px;
+    }
+    .address-val {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .address-strip {
+        padding: 25px 10vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .address-item {
+        gap: 5px;
+    }
+
+    .address-label {
+        font-size: 14px;
+    }
+    .address-val {
+        font-size: 14px;
+    }
 }
