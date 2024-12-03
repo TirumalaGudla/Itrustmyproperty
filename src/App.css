@@ -1,22 +1,32 @@
 /* App.css */
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     box-sizing: border-box;
-  }
-  
-  .app-wrapper {
+    scroll-behavior: smooth !important;
+}
+
+.app-wrapper {
     height: 100vh;
     overflow-y: auto;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
-  }
-  
-  .app-wrapper::-webkit-scrollbar {
+}
+
+.app-wrapper::-webkit-scrollbar {
     display: none; /* Chrome, Safari, and Opera */
-  }
-  
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+::-webkit-scrollbar {
+    width: 0px; /* Width of the vertical scrollbar */
+    height: 0px; /* Height of the horizontal scrollbar */
+}

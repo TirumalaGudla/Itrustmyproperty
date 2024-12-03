@@ -1,0 +1,9 @@
+.indrravathi-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: #fff;
+}
