@@ -11,7 +11,7 @@ import Brochure from "./Brochure/Brochure";
 
 const Sections = () => {
     const [activeTab, setActiveTab] = useState(indrravathiTabs[0].id);
-    const offset = -100; // Adjust offset as needed
+    // const offset = -100; // Adjust offset as needed
 
     const handleClickTab = (id) => {
         setActiveTab(id);

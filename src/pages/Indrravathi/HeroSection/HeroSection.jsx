@@ -35,7 +35,7 @@ const HeroSection = ({ togglePopup }) => {
                     {indrravathiHero.length > 4 ? (
                         <div className="ind-hero-last-img-box">
                             <div className="overlay" onClick={() => handleClickImage(3)}>
-                                <span className="overlay-text">{`+ ${indrravathiHero.length - 4} More`}</span>
+                                <span className="overlay-text">{`+${indrravathiHero.length - 4} More`}</span>
                             </div>
                             <img className="ind-hero-image-4" src={indrravathiHero[3].img} alt="ind-hero" />
                         </div>
