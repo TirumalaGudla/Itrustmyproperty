@@ -15,6 +15,15 @@ const Brochure = () => {
         }
     };
 
+    const handleDownload = () => {
+        const link = document.createElement("a");
+        link.href = "/images/indrravathi/indrravathi_brochure.pdf"; // Replace with the actual path
+        link.download = "indrravathi_brochure.pdf"; // Optional: Provide a name for the downloaded file
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <div className="brochure-section" id="BROCHURE">
             <span className="brochure-span">Brochure</span>
@@ -33,7 +42,7 @@ const Brochure = () => {
                     <GrNext className="carousel-nav-btn" />
                 </div>
             </div>
-            <button className="download-brochure-btn">
+            <button className="download-brochure-btn" onClick={handleDownload}>
                 <MdOutlineFileDownload className="download-icon" /> Download Brochure
             </button>
         </div>

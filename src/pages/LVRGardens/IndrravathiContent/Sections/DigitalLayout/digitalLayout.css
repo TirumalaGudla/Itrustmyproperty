@@ -1,0 +1,49 @@
+.dl-section {
+    position: relative;
+    padding: 50px 0;
+}
+
+.dl-section .view-dl-btn {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: rgba(65, 94, 48, 1);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dl-section .view-dl-btn .arrow-icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.dl-section .dl-span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #415e30;
+    margin-bottom: 10px;
+    background-color: #dff1d6;
+    padding: 5px 10px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.dl-section .dl-title {
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #000;
+}
+
+.dl-section img {
+    width: 100%;
+}

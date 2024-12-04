@@ -8,20 +8,22 @@ import { useNavigate } from "react-router-dom";
 
 const ventures = [
     {
-        title: "Green Valley",
+        title: "Indrravathi",
         location: "Vijayawada",
         date: "July 20, 2024",
         price: "25000/sq yd",
         listings: "150 Plots Available",
-        image: image1,
+        image: "/images/indrravathi_img.png",
+        pageUrl: "/indrravathi",
     },
     {
-        title: "Fortune Estate",
+        title: "LVR Gardens",
         location: "Hyderabad",
         date: "August 5, 2024",
         price: "18000/sq yd",
         listings: "200 Plots Available",
-        image: image1,
+        image: "/images/lvr_gardens_img.png",
+        pageUrl: "/lvr-gardens",
     },
     {
         title: "Sunny Heights",
@@ -30,6 +32,7 @@ const ventures = [
         price: "22000/sq yd",
         listings: "100 Plots Available",
         image: image1,
+        pageUrl: "/inprogress",
     },
     {
         title: "Skyline Residency",
@@ -38,6 +41,7 @@ const ventures = [
         price: "27000/sq yd",
         listings: "120 Plots Available",
         image: image1,
+        pageUrl: "/inprogress",
     },
     {
         title: "Golden Meadows",
@@ -46,6 +50,7 @@ const ventures = [
         price: "21000/sq yd",
         listings: "180 Plots Available",
         image: image1,
+        pageUrl: "/inprogress",
     },
     {
         title: "Blue Horizon",
@@ -54,16 +59,21 @@ const ventures = [
         price: "30000/sq yd",
         listings: "140 Plots Available",
         image: image1,
+        pageUrl: "/inprogress",
     },
 ];
 
-
 const TopVentures = () => {
-  const navigate= useNavigate()
+    const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate('/guntur-ventures')
-  }
+    // const handleClick = () => {
+    //     navigate("/guntur-ventures");
+    // };
+
+    const handleRedirect = (url) => {
+        url && navigate(url);
+    };
+
     return (
         <div className="top-ventures-wrapper1">
             <div className="heading-wrapper1">
@@ -76,7 +86,7 @@ const TopVentures = () => {
             </div>
             <div className="ventures-container">
                 {ventures.map((venture, index) => (
-                    <div key={index} className="venture-card" onClick={handleClick}>
+                    <div key={index} className="venture-card">
                         <img src={venture.image} alt={venture.title} className="venture-image" />
                         <div className="venture-info">
                             {/* <div className="venture-title">
@@ -90,7 +100,7 @@ const TopVentures = () => {
                                     <h3 className="truncate-title">{venture.title}</h3>
                                     <div className="title-tooltip">{venture.title}</div> {/* Custom tooltip */}
                                 </div>
-                                <button className="view-listing-button">
+                                <button className="view-listing-button" onClick={() => handleRedirect(venture.pageUrl)}>
                                     View Listing <FaExternalLinkAlt className="view-listing-icon" />
                                 </button>
                             </div>

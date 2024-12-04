@@ -3,7 +3,7 @@ import { CgArrowsExpandUpRight } from "react-icons/cg";
 const DigitalLayout = () => {
     return (
         <div className="dl-section" id="VIEW_LAYOUT">
-            <button className="view-dl-btn">
+            <button className="view-dl-btn" onClick={() => window.open("/indrravathi-layout")}>
                 View Digital Layout <CgArrowsExpandUpRight className="arrow-icon" />{" "}
             </button>
             <span className="dl-span">Layout</span>

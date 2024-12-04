@@ -3,7 +3,7 @@
     padding: 20px;
     width: 1100px;
     margin: auto;
-    margin-top: 100px !important; 
+    margin-top: 100px !important;
 }
 
 .heading1 {
@@ -16,16 +16,15 @@
     padding: 10px;
     box-sizing: border-box;
     scroll-snap-type: x mandatory; /* Snap scrolling */
-    
+
     /* Hide scrollbar */
     scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 
 .image-gallery::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
+    display: none; /* Safari and Chrome */
 }
-
 
 .image-item {
     position: relative;
@@ -38,6 +37,7 @@
     height: 150px;
     flex-shrink: 0;
     scroll-snap-align: start; /* Snap to start of item */
+    cursor: pointer;
 }
 
 .image-item img {
@@ -48,7 +48,7 @@
 
 .image-item .city-name {
     position: absolute;
-   
+
     color: white;
     padding: 5px 10px;
     border-radius: 5px;

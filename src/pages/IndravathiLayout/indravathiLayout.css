@@ -1,0 +1,10 @@
+.ind-layout {
+    margin-top: 12vh !important;
+    display: grid;
+    place-items: center;
+    padding: 10px 0 0 0;
+}
+
+.ind-layout img {
+    width: 100%;
+}

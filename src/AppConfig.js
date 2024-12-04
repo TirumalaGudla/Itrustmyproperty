@@ -148,15 +148,6 @@ export const indrravathiHero = [
     },
 ];
 
-// export const indrravathiTabs = [
-//     "Venture Amenities",
-//     "Location Highlights",
-//     "View Map",
-//     "View Layout",
-//     "Brochure",
-//     "Contact",
-// ];
-
 export const indrravathiTabs = [
     {
         id: "VENTURE_AMENITIES",
@@ -340,5 +331,55 @@ export const indrravathiBrochure = [
     {
         id: 5,
         img: "/images/indrravathi/ind_brochure_img_5.png",
+    },
+];
+
+export const lvrHero = [
+    {
+        id: 1,
+        img: "/images/lvr/lvr_hero_1.jpg",
+    },
+    {
+        id: 2,
+        img: "/images/lvr/lvr_hero_2.jpg",
+    },
+    {
+        id: 3,
+        img: "/images/lvr/lvr_hero_3.jpg",
+    },
+    {
+        id: 4,
+        img: "/images/lvr/lvr_hero_4.jpg",
+    },
+    {
+        id: 5,
+        img: "/images/lvr/lvr_hero_5.jpg",
+    },
+    {
+        id: 6,
+        img: "/images/lvr/lvr_hero_6.jpg",
+    },
+];
+
+export const lvrBrochure = [
+    {
+        id: 1,
+        img: "/images/lvr/lvr_hero_1.jpg",
+    },
+    {
+        id: 2,
+        img: "/images/lvr/lvr_hero_2.jpg",
+    },
+    {
+        id: 3,
+        img: "/images/lvr/lvr_hero_3.jpg",
+    },
+    {
+        id: 4,
+        img: "/images/lvr/lvr_hero_4.jpg",
+    },
+    {
+        id: 5,
+        img: "/images/lvr/lvr_hero_5.jpg",
     },
 ];

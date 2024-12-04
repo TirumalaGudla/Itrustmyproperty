@@ -1,0 +1,128 @@
+.brochure-section {
+    padding: 50px 0;
+    user-select: none;
+}
+
+.brochure-section .brochure-span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #415e30;
+    margin-bottom: 10px;
+    background-color: #dff1d6;
+    padding: 5px 10px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.brochure-section .brochure-title {
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.carousel-nav-btn-box {
+    position: relative;
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 30px;
+}
+
+.carousel-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.carousel-box img {
+    width: 370px;
+    height: 280px;
+}
+.carousel-nav-btn-box-left {
+    backdrop-filter: blur(2px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    padding: 30px 10px;
+    left: 0px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.view-brochure-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+.carousel-nav-btn-box-right {
+    backdrop-filter: blur(2px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    padding: 30px 10px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.carousel-nav-btn-box .carousel-nav-btn {
+    font-size: 25px;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        scale: 1.4;
+    }
+}
+
+.brochure-section .download-brochure-btn {
+    background-color: transparent;
+    color: #000000be;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid #000000be;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-inline: auto;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        color: #000;
+        border-color: #000;
+    }
+}
+
+.brochure-section .download-brochure-btn .download-icon {
+    font-size: 20px;
+}

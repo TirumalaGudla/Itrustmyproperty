@@ -14,10 +14,7 @@ const About = () => {
                 array of modern amenities. The community features a grand main entrance Residents enjoy the convenience
                 of 40ft internal blacktop roads, overhead tanks, solar-fenced compound walls, and individual plot water
                 tap connections The community features <br />
-                Constructed by{" "}
-                <a href="https://sreesaravana.com/largest-gated-community/" target="_blank" rel="noreferrer">
-                    Saravana Universal Projects Pvt.Ltd
-                </a>
+                Constructed by <a href="/sri-saravana">Saravana Universal Projects Pvt.Ltd</a>
             </p>
             <div className="indrravathi-specs">
                 <div className="indrravathi-spec">

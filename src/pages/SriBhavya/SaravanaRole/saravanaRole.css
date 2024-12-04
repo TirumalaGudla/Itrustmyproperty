@@ -1,0 +1,135 @@
+.saravana-role {
+    padding: 30px 15vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.saravana-role-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.saravana-role-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.saravana-role-image {
+    flex: 1;
+}
+
+.saravana-role-description {
+    padding-left: 50px;
+    flex: 2;
+    font-size: 14px;
+    color: #000;
+    line-height: 28px;
+    margin: 0;
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+    .saravana-role {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .saravana-role-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-underline-offset: 4px;
+        line-height: 20px;
+    }
+
+    .saravana-role-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .saravana-role-content img {
+        width: 100%;
+        border-radius: 10px;
+        max-width: 500px;
+    }
+
+    .saravana-role-description {
+        padding-left: 0px;
+        font-size: 12px;
+        line-height: 24px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .saravana-role {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .saravana-role-title {
+        font-size: 18px;
+        margin-bottom: 15px;
+        text-underline-offset: 5px;
+        line-height: 25px;
+    }
+
+    .saravana-role-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .saravana-role-content img {
+        width: 100%;
+        border-radius: 10px;
+        max-width: 500px;
+    }
+
+    .saravana-role-description {
+        padding-left: 0px;
+        font-size: 12px;
+        line-height: 24px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .saravana-role {
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .saravana-role-title {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: #000;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+    }
+
+    .saravana-role-content {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .saravana-role-image {
+        flex: 1;
+        max-width: 350px;
+    }
+
+    .saravana-role-description {
+        padding-left: 20px;
+        flex: 2;
+        font-size: 12px;
+        line-height: 24px;
+    }
+}

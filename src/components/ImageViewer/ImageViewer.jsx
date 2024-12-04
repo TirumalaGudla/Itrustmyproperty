@@ -3,29 +3,31 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { useNavigate, useLocation } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import "./imageViewer.css";
-import { indrravathiHero } from "../../AppConfig";
+import { indrravathiHero, lvrHero } from "../../AppConfig";
 
 const ImageViewer = ({ togglePopup }) => {
     const navigate = useNavigate(); // Initialize useNavigate
     const location = useLocation();
     const queryParam = location.search.split("/")[1]; // Extract the ID from the query parameter
+    const path = location.pathname;
+    const images = path.includes("indrravathi") ? indrravathiHero : lvrHero;
 
     const handleClose = () => {
         togglePopup(); // Close the modal when clicked
-        navigate("/indrravathi");
+        navigate(path);
     };
 
     const handlePreviousImage = () => {
         if (Number(queryParam) > 0) {
-            navigate(`/indrravathi?heroimg/${Number(queryParam) - 1}`);
+            navigate(`${path}?heroimg/${Number(queryParam) - 1}`);
         } else {
             alert("you reached first image!");
         }
     };
 
     const handleNextImage = () => {
-        if (Number(queryParam) < indrravathiHero.length - 1) {
-            navigate(`/indrravathi?heroimg/${Number(queryParam) + 1}`);
+        if (Number(queryParam) < images.length - 1) {
+            navigate(`${path}?heroimg/${Number(queryParam) + 1}`);
         } else {
             alert("you reached end of the list");
         }
@@ -41,12 +43,12 @@ const ImageViewer = ({ togglePopup }) => {
                 <button className="arrow-btn" title="Previous image" onClick={handlePreviousImage}>
                     <FaChevronLeft className="left-arrow" />
                 </button>
-                <img src={indrravathiHero[Number(queryParam)]?.img} alt="image-view-popup" />
+                <img src={images[Number(queryParam)]?.img} alt="image-view-popup" />
                 <button className="arrow-btn" title="Next image" onClick={handleNextImage}>
                     <FaChevronRight className="right-arrow" />
                 </button>
             </div>
-            <span className="image-index">{`${Number(queryParam) + 1} / ${indrravathiHero.length}`}</span>
+            <span className="image-index">{`${Number(queryParam) + 1} / ${images.length}`}</span>
         </div>
     );
 };
