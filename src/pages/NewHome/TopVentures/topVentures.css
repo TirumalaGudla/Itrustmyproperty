@@ -1,0 +1,383 @@
+.top-ventures {
+    padding: 40px 80px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-ventures .top-ventures-title {
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+}
+
+.top-ventures .top-ventures-title::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35px;
+    height: 2px;
+    background-color: #415e31;
+}
+.top-ventures .top-ventures-title::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #415e31;
+    top: 45px;
+}
+
+.top-ventures .view-all-button {
+    align-self: flex-end;
+    background-color: #3f5e2d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.top-ventures .venture-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    width: 100%;
+}
+
+.top-ventures .venture-list .venture-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        scale: 1.02;
+    }
+}
+
+.venture-list .venture-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.venture-list .venture-item .venture-info {
+    padding: 15px 15px 25px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.venture-info .venture-title-view-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.venture-info .venture-title-view-btn .venture-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.venture-info .venture-title-view-btn .view-listing-button {
+    background-color: #3f5e2d;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.venture-info .venture-location-date,
+.venture-price-listings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 12px;
+}
+
+.venture-info .venture-location-date .venture-location,
+.venture-date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.venture-info .venture-price-listings .venture-price,
+.venture-listings {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .top-ventures {
+        padding: 30px 30px;
+    }
+
+    .top-ventures .top-ventures-title {
+        font-size: 18px;
+        position: relative;
+    }
+
+    .top-ventures .top-ventures-title::after {
+        top: 30px;
+    }
+    .top-ventures .top-ventures-title::before {
+        top: 40px;
+    }
+
+    .top-ventures .view-all-button {
+        padding: 6px 8px;
+        font-size: 12px;
+        margin-top: 25px;
+    }
+
+    .top-ventures .venture-list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px 0;
+    }
+
+    .venture-info .venture-title-view-btn .venture-title {
+        font-size: 16px;
+    }
+
+    .venture-info .venture-location-date,
+    .venture-price-listings {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+    .top-ventures {
+        padding: 30px 15%;
+    }
+
+    .top-ventures .top-ventures-title {
+        font-size: 20px;
+        position: relative;
+    }
+
+    .top-ventures .top-ventures-title::after {
+        top: 30px;
+    }
+    .top-ventures .top-ventures-title::before {
+        top: 40px;
+    }
+
+    .top-ventures .view-all-button {
+        padding: 6px 8px;
+        font-size: 12px;
+        margin-top: 25px;
+    }
+
+    .top-ventures .venture-list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px 0;
+    }
+
+    .venture-info .venture-title-view-btn .venture-title {
+        font-size: 16px;
+    }
+
+    .venture-info .venture-location-date,
+    .venture-price-listings {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+    .top-ventures {
+        padding: 30px;
+    }
+
+    .top-ventures .top-ventures-title {
+        font-size: 20px;
+        position: relative;
+    }
+
+    .top-ventures .top-ventures-title::after {
+        top: 30px;
+    }
+    .top-ventures .top-ventures-title::before {
+        top: 40px;
+    }
+
+    .top-ventures .view-all-button {
+        padding: 6px 8px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .top-ventures .venture-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .venture-info .venture-title-view-btn .venture-title {
+        font-size: 16px;
+    }
+
+    .venture-info .venture-location-date,
+    .venture-price-listings {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .top-ventures {
+        padding: 30px 40px;
+    }
+
+    .top-ventures .top-ventures-title {
+        font-size: 25px;
+        position: relative;
+    }
+
+    .top-ventures .top-ventures-title::after {
+        top: 35px;
+    }
+    .top-ventures .top-ventures-title::before {
+        top: 45px;
+    }
+
+    .top-ventures .view-all-button {
+        padding: 6px 8px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .top-ventures .venture-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px;
+    }
+
+    .venture-list .venture-item .venture-info {
+        padding: 15px 20px 25px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .venture-info .venture-title-view-btn .venture-title {
+        font-size: 16px;
+    }
+
+    .venture-info .venture-location-date,
+    .venture-price-listings {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .top-ventures {
+        padding: 30px 40px;
+    }
+
+    .top-ventures .top-ventures-title {
+        font-size: 25px;
+        position: relative;
+    }
+
+    .top-ventures .top-ventures-title::after {
+        top: 35px;
+    }
+    .top-ventures .top-ventures-title::before {
+        top: 45px;
+    }
+
+    .top-ventures .view-all-button {
+        padding: 10px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .top-ventures .venture-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .venture-list .venture-item .venture-info {
+        padding: 15px 20px 25px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .venture-info .venture-title-view-btn .venture-title {
+        font-size: 16px;
+    }
+
+    .venture-info .venture-location-date,
+    .venture-price-listings {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    /* .top-ventures {
+        padding: 30px 80px;
+    }
+
+    .top-ventures .top-ventures-title {
+        font-size: 25px;
+        position: relative;
+    }
+
+    .top-ventures .top-ventures-title::after {
+        top: 35px;
+    }
+    .top-ventures .top-ventures-title::before {
+        top: 45px;
+    }
+
+    .top-ventures .view-all-button {
+        padding: 10px;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .top-ventures .venture-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .venture-list .venture-item .venture-info {
+        padding: 15px 20px 25px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .venture-info .venture-title-view-btn .venture-title {
+        font-size: 16px;
+    }
+
+    .venture-info .venture-location-date,
+    .venture-price-listings {
+        font-size: 12px;
+    } */
+}

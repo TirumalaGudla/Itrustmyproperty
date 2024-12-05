@@ -12,13 +12,15 @@ import LVRGardens from "./pages/LVRGardens";
 import SriBhavya from "./pages/SriBhavya";
 import IndravathiLayout from "./pages/IndravathiLayout/IndravathiLayout";
 import InprogressPage from "./pages/InprogressPage/InprogressPage";
+import NewHome from "./pages/NewHome/NewHome";
 
 function App() {
     return (
         <div className="app-wrapper">
             <Routes>
                 {/* <Route path="/" element={<Navigate to="/login" />} /> */}
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" element={<NewHome />} />
+                <Route path="/old" element={<HomePage />} />
                 <Route path="/guntur-ventures" element={<ListingPage />} />
                 <Route path="/sri-saravana" element={<SriSaravana />} />
                 <Route path="/indrravathi" element={<IndrravathiPage />} />
