@@ -20,7 +20,7 @@ const ventures = [
         date: "August 5, 2024",
         price: "18000/sq yd",
         listings: "200 Plots Available",
-        image: "/images/lvr_gardens_img.png",
+        image: "/images/lvr-photo.jpg",
         pageUrl: "/lvr-gardens",
     },
     {
@@ -29,7 +29,7 @@ const ventures = [
         date: "June 15, 2024",
         price: "22000/sq yd",
         listings: "100 Plots Available",
-        image: "/images/lvr_gardens_img.png",
+        image: "/images/top-venture2.jpg",
         pageUrl: "/inprogress",
     },
     {
@@ -47,7 +47,7 @@ const ventures = [
         date: "May 30, 2024",
         price: "21000/sq yd",
         listings: "180 Plots Available",
-        image: "/images/lvr_gardens_img.png",
+        image: "/images/top-ventue3.png",
         pageUrl: "/inprogress",
     },
     {
@@ -56,7 +56,7 @@ const ventures = [
         date: "October 22, 2024",
         price: "30000/sq yd",
         listings: "140 Plots Available",
-        image: "/images/lvr_gardens_img.png",
+        image: "/images/top-venture4.jpg",
         pageUrl: "/inprogress",
     },
 ];

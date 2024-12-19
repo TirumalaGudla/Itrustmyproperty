@@ -7,7 +7,8 @@ const InprogressPage = () => {
         <>
             <Header />
             <div className="inprogress">
-                <h1>This page is under construction! Please come back later</h1>
+                <h1>🚧 This Page is Under Construction! 🚧</h1>
+                <p>We’re working hard to bring this page to life. Please check back soon!</p>
             </div>
 
             <Footer />

@@ -1,14 +1,37 @@
-.inprogress {
+.inprogress { 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    /* background-color: #f5f5f5; */
     text-align: center;
     font-size: 20px;
     font-weight: bold;
     color: #000;
     background-image: url("/public/images/inprogress.jpg");
-    background-size: cover;
+    background-size: 100% 100%;
+    /* background-position: center; */
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+/* Media Query for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .inprogress {
+        font-size: 16px; /* Reduce font size */
+        padding: 20px;  /* Add some padding */
+        background-size: 100% 100%; /* Ensure the background image fits well */
+        background-repeat: no-repeat;
+    }
+}
+
+/* Media Query for Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+    .inprogress {
+        font-size: 14px; /* Further reduce font size for smaller screens */
+        padding: 10px;  /* Add smaller padding */
+        background-size:100% 100%;
+        background-position: top; /* Adjust background positioning */
+        background-repeat: no-repeat;
+    }
 }
